@@ -1,0 +1,15 @@
+version: 4.0.69
+steps:
+  - prompt: Use the search icon to search for "API".
+    commands:
+      - command: hover-image
+        description: search icon in the webpage header
+        action: click
+      - command: type
+        text: API
+  - prompt: >-
+      Assert that search results related to API are displayed.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: search results related to API are displayed
