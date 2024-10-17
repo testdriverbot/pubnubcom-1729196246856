@@ -1,0 +1,14 @@
+version: 4.0.69
+steps:
+  - prompt: Click on "Try for free".
+    commands:
+      - command: hover-text
+        text: Try for free
+        description: button in the header
+        action: click
+  - prompt: >-
+      Assert that the user is directed to a free trial sign-up page.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: the user is directed to a free trial sign-up page
